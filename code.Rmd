@@ -28,7 +28,7 @@ For improved computational efficiency and easier interoperability with `sf`, I r
 -   combine tiles into a single `stars` object for each date (2021-02-07 and 2021-02-16)\
     -   hint: use `st_mosaic`
 
-```{r}
+```{r include=TRUE, warning=FALSE, message=FALSE, results = FALSE}
 library(tidyverse)
 library(sf)
 library(stars)
@@ -42,7 +42,7 @@ library(gt)
 library(patchwork)
 ```
 
-```{r include=TRUE}
+```{r include=TRUE, warning=FALSE, message=FALSE, results = FALSE}
 # read in tile data
 light_data1 <- read_stars(here("data/VNP46A1/VNP46A1.A2021038.h08v05.001.2021039064328.tif"))
 light_data2 <- read_stars(here("data/VNP46A1/VNP46A1.A2021038.h08v06.001.2021039064329.tif"))
@@ -210,7 +210,7 @@ paste0("The number of homes within blackout areas of Houston is ", n_distinct(bl
 -   select the median income field `B19013e1`\
 -   hint: reproject data to EPSG:3083\
 
-```{r include=TRUE}
+```{r include=TRUE, warning=FALSE, message=FALSE, results = FALSE}
 # read in census layer and transform to 3083
 census_tract <- st_read(here("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb/"), layer = "ACS_2019_5YR_TRACT_48_TEXAS") %>% 
   st_transform(crs = 3083)
