@@ -1,5 +1,5 @@
 ---
-title: 'EDS 223: assignment 3'
+title: 'finding-impacted-homes-of-houston-blackouts-2021'
 author: "Kat Le"
 date: "2022-10-26"
 output:
